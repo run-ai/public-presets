@@ -1,0 +1,71 @@
+{
+  "version": "1.0.0",
+
+  "compute": [
+    {
+      "meta": {
+        "name": "compute-1",
+        "scope":"tenant"
+      },
+      "spec": {
+        "gpuDevicesRequest": 1,
+        "gpuRequestType":"portion",
+        "cpuCoreRequest": 0.1,
+        "cpuMemoryRequest": "100M"
+      }
+    },
+    {
+      "meta": {
+        "name": "compute-2",
+        "scope":"project",
+        "projectId": 123
+      },
+      "spec": {
+        "gpuRequestType":"memory",
+        "gpuMemoryRequest":"80G"
+      }
+    }
+  ],
+
+  "environment": [
+    {
+      "meta": {
+        "name": "env-1",
+        "scope": "tenant",
+        "workloadSupportedTypes": {
+          "inference": true
+        }
+      },
+      "spec": {
+        "image": "gcr.io/image:latest",
+        "imagePullPolicy": "IfNotPresent"
+      }
+    },
+    {
+      "meta": {
+        "name": "env-2",
+        "scope": "tenant"
+      },
+      "spec": {
+        "image": "gcr.io/image:previous"
+      }
+    }
+  ],
+
+  "model": [
+    {
+      "meta": {
+        "name": "model-1",
+        "scope": "tenant"
+      },
+      "spec": {
+        "title": "model-1 title",
+        "description": "model-1 description",
+        "assets": {
+          "environment": "env-1",
+          "compute": "compute-2"
+        }
+      }
+    }
+  ]
+}
