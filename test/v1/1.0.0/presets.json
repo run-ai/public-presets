@@ -45,7 +45,11 @@
     {
       "meta": {
         "name": "env-2",
-        "scope": "tenant"
+        "scope": "tenant",
+        "workloadSupportedTypes": {
+          "training": true,
+          "inference": true
+        }
       },
       "spec": {
         "image": "gcr.io/image:previous"
