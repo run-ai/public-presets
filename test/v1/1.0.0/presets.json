@@ -21,6 +21,7 @@
         "scope": "tenant"
       },
       "spec": {
+        "gpuDevicesRequest": 1,
         "gpuRequestType": "memory",
         "gpuMemoryRequest": "80G"
       }
