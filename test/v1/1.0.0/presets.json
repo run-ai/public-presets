@@ -18,8 +18,7 @@
     {
       "meta": {
         "name": "compute-2",
-        "scope": "project",
-        "projectId": 123
+        "scope": "tenant"
       },
       "spec": {
         "gpuRequestType": "memory",
