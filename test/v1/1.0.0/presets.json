@@ -5,11 +5,12 @@
     {
       "meta": {
         "name": "compute-1",
-        "scope":"tenant"
+        "scope": "tenant"
       },
       "spec": {
         "gpuDevicesRequest": 1,
-        "gpuRequestType":"portion",
+        "gpuRequestType": "portion",
+        "gpuPortionRequest": 1,
         "cpuCoreRequest": 0.1,
         "cpuMemoryRequest": "100M"
       }
@@ -17,12 +18,12 @@
     {
       "meta": {
         "name": "compute-2",
-        "scope":"project",
+        "scope": "project",
         "projectId": 123
       },
       "spec": {
-        "gpuRequestType":"memory",
-        "gpuMemoryRequest":"80G"
+        "gpuRequestType": "memory",
+        "gpuMemoryRequest": "80G"
       }
     }
   ],
